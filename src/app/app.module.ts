@@ -17,13 +17,13 @@ import { AppComponent } from './app.component';
     provide: RouteReuseStrategy, 
     useClass: IonicRouteStrategy }, 
     provideFirebaseApp(() => initializeApp({
-      apiKey: "AIzaSyA0NOIXwWM9XSJWOIpFXGswaBsQteQqpbE",
-      authDomain: "myuas-ab9e2.firebaseapp.com",
-      projectId: "myuas-ab9e2",
-      storageBucket: "myuas-ab9e2.firebasestorage.app",
-      messagingSenderId: "387284155100",
-      appId: "1:387284155100:web:3a9925a33e57ded8d41219",
-      measurementId: "G-R5F5TB7FMK"
+      apiKey: "xxxxxxxx",
+      authDomain: "xxxxxxx",
+      projectId: "xxxxxxx",
+      storageBucket: "xxxxxxx",
+      messagingSenderId: "xxxxx",
+      appId: "xxxxx",
+      measurementId: "xxxxxx"
   })), 
   provideAuth(() => getAuth()), 
   provideFirestore(() => getFirestore())],
