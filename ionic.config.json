@@ -1,0 +1,7 @@
+{
+  "name": "myUas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
