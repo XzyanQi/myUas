@@ -57,49 +57,107 @@
 .customShape {
   width: 200px;
   height: 100px;
-  background: linear-gradient(90deg, #4373c6 0%, #3164b0 100%);
+  background: linear-gradient(135deg, #4373c6 0%, #2155a9 100%);
   clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  box-shadow: 0 8px 20px rgba(67, 115, 198, 0.3);
+  transition: all 0.3s ease;
 }
 
+.customShape:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(67, 115, 198, 0.4);
+}
 
 .type1 {
   position: absolute;
   width: 280px;
   height: 280px;
-  background: linear-gradient(90deg, #4373c6 0%, #3164b0 100%);
-  box-shadow: 0px 1px 10px rgba(98, 140, 255, 0.5);
+  background: linear-gradient(135deg, #4373c6 0%, #2155a9 100%);
+  box-shadow: 0 10px 30px rgba(98, 140, 255, 0.5);
   top: -50px;
   left: -50px;
+  border-radius: 0 0 50% 0;
+  animation: pulse 3s infinite alternate;
+}
+
+@keyframes pulse {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
 }
 
 .type2 {
   width: 100px;
   height: 100px;
   background: #0e4ab3;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(14, 74, 179, 0.3);
+  transition: all 0.3s ease;
+}
+
+.type2:hover {
+  transform: rotate(10deg);
 }
 
 .circle1 {
   margin-left: 180px;
   margin-top: 50px;
+  background: radial-gradient(circle, #5686d9 0%, #3164b0 100%);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 5px 15px rgba(86, 134, 217, 0.4);
 }
 
 .circle2 {
   position: absolute;
   top: 150px;
   left: -20px;
+  background: radial-gradient(circle, #5686d9 0%, #3164b0 100%);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 5px 15px rgba(86, 134, 217, 0.4);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }
 
 .welcomeMessage {
   position: absolute;
   top: 70px;
   left: 50px;
-  p {
-    font-weight: bold;
-    font-size: 1.8rem;
-    margin-top: 5px;
-  }
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-out;
+}
+
+.welcomeMessage p {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .error {
   font-size: 0.75rem;
+  color: #ff3b30;
+  margin-top: 5px;
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.error:before {
+  content: "⚠️";
+  margin-right: 5px;
+  font-size: 0.7rem;
 }

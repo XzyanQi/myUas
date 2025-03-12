@@ -25,7 +25,23 @@ export class HomePage implements OnInit {
  
 //user =  [
 //{ name: 'Faqih Muhammad Ihsan', photo: 'https://randomuser.me/api/portraits/men/1.jpg' },]
-  constructor(
+ 
+   // 🔹 Data Dummy untuk Status
+   statusData = [
+    { name: "Ihsan", avatar: "https://randomuser.me/api/portraits/men/10.jpg", lastUpdated: "10 minutes ago" },
+    { name: "San", avatar: "https://randomuser.me/api/portraits/men/11.jpg", lastUpdated: "20 minutes ago" },
+    { name: "XzyanQi", avatar: "https://randomuser.me/api/portraits/men/12.jpg", lastUpdated: "1 hour ago" },
+    { name: "Evelena", avatar: "https://randomuser.me/api/portraits/women/13.jpg", lastUpdated: "2 hours ago" },
+  ];
+
+ // 🔹 Data Dummy untuk Calls
+ callsData = [
+  { name: "Ihsan", avatar: "https://randomuser.me/api/portraits/men/10.jpg", type: "Incoming", time: "Today, 10:30 AM" },
+  { name: "San", avatar: "https://randomuser.me/api/portraits/men/11.jpg", type: "Outgoing", time: "Today, 9:00 AM" },
+  { name: "XzyanQi", avatar: "https://randomuser.me/api/portraits/men/12.jpg", type: "Missed", time: "Yesterday, 4:45 PM" },
+  { name: "Evelena", avatar: "https://randomuser.me/api/portraits/women/13.jpg", type: "Incoming", time: "Yesterday, 8:15 PM" },
+];
+constructor(
     private router: Router,
     private chatService: ChatService
   ) { }
@@ -45,11 +61,17 @@ export class HomePage implements OnInit {
     try {
       console.log('Logging out...');
       await this.chatService.auth.logout();
-      this.router.navigateByUrl('/login', {replaceUrl: true});
-    } catch(e) {
-      console.error(e);
+      
+      // Hapus data di local storage/session storage jika ada
+      localStorage.clear();
+      sessionStorage.clear();
+  
+      this.router.navigateByUrl('/login', { replaceUrl: true });
+    } catch (e) {
+      console.error('Logout error:', e);
     }
   }
+  
 
   onSegmentChanged(event: any) {
     console.log(event);

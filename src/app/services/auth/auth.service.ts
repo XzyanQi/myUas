@@ -61,7 +61,7 @@ export class AuthService {
         email: formValue.email,
         name: formValue.username,
         uid: registeredUser.user.uid,
-        photo: 'https://cdn-icons-png.flaticon.com/512/1999/1999625.png',
+        photo: 'https://randomuser.me/api/portraits/men/10.jpg',
       };
       await this.apiService.setDocument(`users/${registeredUser.user.uid}`, data);
       const userData = {
