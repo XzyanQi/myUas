@@ -10,4 +10,15 @@ kalau auth, ionic g guard, jika ada kesalahan, anda dapat menanyakannya kepada A
 
 nanti tambahkan angular fire, untuk promtnya dapat anda cek di situs angular fire
 
-integrasi dengan firebase, dan nanti sesuaikan seperti environments ts
+integrasi dengan firebase > pilih authentication dan firestore database, integrasikan firebase firestore dengan proyeknya
+
+dan nanti sesuaikan seperti environments ts
+
+setelah itu, jalankan proyeknya
+
+Terakhir, anda dapat mengakses Proyek ini melalui :
+
+## 🚀 Live Demo  
+Klik link berikut untuk melihat proyek yang sudah dideploy:  
+🔗 [connectu-mocha.vercel.app](https://connectu-mocha.vercel.app)
+
