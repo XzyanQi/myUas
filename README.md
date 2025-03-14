@@ -5,8 +5,8 @@ Ionic Start (buat file sesuai keinginan anda), contoh `ionic start app Chats bla
 
 seteleah itu masuk ke file cd (nama proyek)
 
-ionic g page (sesuai yang di folder) 
-kalau auth, ionic g guard, jika ada kesalahan, anda dapat menanyakannya kepada AI
+ionic g page/ (sesuai yang di folder) 
+kalau auth, ionic g guard/guards
 
 nanti tambahkan angular fire, untuk promtnya dapat anda cek di situs angular fire
 
