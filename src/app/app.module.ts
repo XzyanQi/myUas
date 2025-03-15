@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
     provide: RouteReuseStrategy, 
     useClass: IonicRouteStrategy }, 
     provideFirebaseApp(() => initializeApp({
-       apiKey: "AIzaSyA0NOIXwWM9XSJWOIpFXGswaBsQteQqpbE",
+       apiKey: "",
       authDomain: "myuas-ab9e2.firebaseapp.com",
       projectId: "myuas-ab9e2",
       storageBucket: "myuas-ab9e2.firebasestorage.app",
