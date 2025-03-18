@@ -1,5 +1,3 @@
-![Uploading download.png…]()
-
 # myUas
 ConnectU - Aplikasi Realtime untuk chat menggunakan Ionic Angular
 
