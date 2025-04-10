@@ -1,11 +1,32 @@
 ion-header.title-header {
     ion-toolbar {
         font-family: "Satisfy", cursive !important;
+
         ion-title {
             letter-spacing: 2px;
             font-size: 1.8rem !important;
+            animation: colorChange 3s infinite; /* Menambahkan animasi */
+
+            /* Tambahkan properti untuk transisi warna */
+            background: linear-gradient(90deg, #ff6f61, #ffa41b, #28c7fa, #a16eff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
+}
+
+/* Definisi animasi */
+@keyframes colorChange {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
     ion-segment {
         --background: var(--ion-color-primary);
         display: flex;
