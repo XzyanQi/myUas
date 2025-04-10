@@ -74,13 +74,15 @@ app-empty-screen {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vw; /* Pastikan tinggi dan lebar sama untuk lingkaran */
-    width: 100vw;
+    height: 300px; /* Pastikan tinggi dan lebar sama untuk lingkaran */
+    width: 300px;
     border-radius: 50%; /* Membuat elemen menjadi lingkaran */
     text-align: center;
     color: var(--ion-color-medium);
     font-size: 1.2rem;
     overflow: hidden; /* Opsional jika ada konten yang melebihi lingkaran */
+    background: var(--ion-color-light); /* Tambahkan warna latar belakang */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opsional untuk efek bayangan */
     margin: auto; /* Agar berada di tengah */
 }
 
