@@ -1,5 +1,5 @@
 # myUas
-ConnectU - Aplikasi Realtime untuk chat menggunakan Ionic Angular
+Xzyan Chat - Aplikasi Realtime untuk chat menggunakan Ionic Angular
 
 Ionic Start (buat file sesuai keinginan anda), contoh `ionic start app Chats blank --type=angular`
 
