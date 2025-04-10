@@ -7,9 +7,9 @@
       </ion-button>
     </ion-buttons>
     <ion-popover #popover trigger="popover" triggerAction="click">
-      <ng-template>
-        <ion-content class="ion-padding ion-text-center" (click)="logout()">
-          <ion-label color="danger">LOGOUT</ion-label>
+  <ng-template>
+    <ion-content class="ion-padding ion-text-center logout-content">
+      <ion-label color="danger" (click)="logout()">LOGOUT</ion-label>
         </ion-content>
       </ng-template>
     </ion-popover>
