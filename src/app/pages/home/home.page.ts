@@ -26,7 +26,7 @@ export class HomePage implements OnInit {
 //user =  [
 //{ name: 'Faqih Muhammad Ihsan', photo: 'https://randomuser.me/api/portraits/men/1.jpg' },]
  
-   // 🔹 Data Dummy untuk Status
+   //  Data Dummy untuk Status
    statusData = [
     { name: "Ihsan", avatar: "https://randomuser.me/api/portraits/men/10.jpg", lastUpdated: "10 minutes ago" },
     { name: "San", avatar: "https://randomuser.me/api/portraits/men/11.jpg", lastUpdated: "20 minutes ago" },
@@ -34,7 +34,7 @@ export class HomePage implements OnInit {
     { name: "Evelena", avatar: "https://randomuser.me/api/portraits/women/13.jpg", lastUpdated: "2 hours ago" },
   ];
 
- // 🔹 Data Dummy untuk Calls
+ //  Data Dummy untuk Calls
  callsData = [
   { name: "Ihsan", avatar: "https://randomuser.me/api/portraits/men/10.jpg", type: "Incoming", time: "Today, 10:30 AM" },
   { name: "San", avatar: "https://randomuser.me/api/portraits/men/11.jpg", type: "Outgoing", time: "Today, 9:00 AM" },
@@ -66,12 +66,23 @@ constructor(
       localStorage.clear();
       sessionStorage.clear();
   
-      this.router.navigateByUrl('/login', { replaceUrl: true });
-    } catch (e) {
-      console.error('Logout error:', e);
+
+   async logout() {
+    try {
+      await this.popoverCtrl.dismiss();
+
+      // Hapus data di local storage/session storage jika ada
+      localStorage.clear();
+      sessionStorage.clear();
+      
+      await this.authService.logout();
+      
+      // Navigasi ke login
+      this.router.navigate(['/login'], { replaceUrl: true });
+    } catch (error) {
+      console.error('Logout error:', error);
     }
   }
-  
 
   onSegmentChanged(event: any) {
     console.log(event);
