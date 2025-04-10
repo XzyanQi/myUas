@@ -1,6 +1,6 @@
 <ion-header class="title-header">
   <ion-toolbar color="primary">
-    <ion-title color="light">ConnectU</ion-title>
+    <ion-title color="light">Xzyan Chat</ion-title>
     <ion-buttons slot="end">
       <ion-button fill="clear" id="popover">
         <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
@@ -29,7 +29,7 @@
 </ion-header>
 
 <ion-content color="light">
-  <!-- 🔹 STATUS SECTION -->
+  <!--  STATUS SECTION -->
   <ion-list *ngIf="segment === 'status'">
     <ion-list-header class="ion-padding-bottom">Recent Status</ion-list-header>
 
@@ -44,7 +44,7 @@
     </ion-item>
   </ion-list>
 
-  <!-- 🔹 CHATS SECTION -->
+  <!--  CHATS SECTION -->
   <ion-list *ngIf="segment === 'chats' && (chatRooms | async) as rooms">
     <ion-list-header class="ion-padding-bottom">Recent Conversations</ion-list-header>
 
@@ -97,7 +97,7 @@
     </ng-template>
   </ion-modal>
 
-  <!-- 🔹 CALLS SECTION -->
+  <!--  CALLS SECTION -->
   <ion-list *ngIf="segment === 'calls'">
     <ion-list-header class="ion-padding-bottom">Recent Calls</ion-list-header>
 
