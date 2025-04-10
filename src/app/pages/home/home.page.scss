@@ -1,4 +1,3 @@
-
 /* Header title styling with animation */
 ion-header.title-header {
     ion-toolbar {
@@ -56,16 +55,18 @@ ion-header.title-header {
     }
 }
 
-/* Popover styling */
+/* Popover styling - FIXED LOGOUT TEXT SIZE */
 ion-popover {
     --width: 120px;
     
     ion-content {
         ion-label {
             padding: 10px;
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 0.9rem !important; /* Smaller font size */
             cursor: pointer;
             transition: background-color 0.2s ease;
+            display: block; /* Ensure it's a block element for full clickability */
             
             &:hover {
                 background-color: rgba(var(--ion-color-danger-rgb), 0.1);
