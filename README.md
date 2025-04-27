@@ -20,5 +20,5 @@ Terakhir, anda dapat mengakses Proyek ini melalui :
 
 ## 🚀 Live Demo  
 Klik link berikut untuk melihat proyek yang sudah dideploy:  
-🔗 [connectu-mocha.vercel.app]((https://zyanqi.vercel.app/login))
+🔗 [connectu-mocha.vercel.app]([https://zyanqi.vercel.app/login])
 
